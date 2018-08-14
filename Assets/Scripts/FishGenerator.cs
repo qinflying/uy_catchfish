@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
 
-public class FishGenerator : MonoBehaviour {
+public class FishGenerator : MonoBehaviour
+{
     //鱼的挂靠点
     public Transform m_FishPanel;
     //地点列表
@@ -13,11 +13,13 @@ public class FishGenerator : MonoBehaviour {
     //
     public float fishGenWaitTime = 0.5f;
 
-	void Start () {
+    void Start()
+    {
         InvokeRepeating("ToGenerate", 0, 1);
-	}
+    }
 
-    void ToGenerate() {
+    void ToGenerate()
+    {
         int genPosIndex = Random.Range(0, m_GeneratePositions.Length);
         int fishPreIndex = Random.Range(0, m_FishPrefabs.Length);
 
@@ -26,25 +28,31 @@ public class FishGenerator : MonoBehaviour {
         float fMaxSpeed = oFishPrefab.GetComponent<FishAttr>().fMaxSpeed;
 
         int gennum = Random.Range(nMaxAmout / 2 + 1, nMaxAmout);
-        float speed = Random.Range(fMaxSpeed/2, fMaxSpeed);
+        float speed = Random.Range(fMaxSpeed / 2, fMaxSpeed);
 
-        MoveMode mmode = (MoveMode) Random.Range(0, 2);
+        MoveMode mmode = (MoveMode)Random.Range(0, 2);
 
         if (mmode == MoveMode.MOVE_DIRECT)
         {
             float angOffset = Random.Range(-22.5f, 22.5f);
             StartCoroutine(GenerateDirectFish(genPosIndex, fishPreIndex, gennum, speed, angOffset));
         }
-        else 
-        { 
+        else
+        {
+            float angSpeed = Random.Range(9, 15);
+            if (Random.Range(0, 2) == 1) {
+                angSpeed *= -1;
+            }
+            StartCoroutine(GenerateTurnFish(genPosIndex, fishPreIndex, gennum, speed, angSpeed));
         }
     }
 
-    //协程？
+    //协程？生成直行鱼群
     IEnumerator GenerateDirectFish(int posIndex, int prefabIndex, int num, float speed, float angOffset)
     {
         GameObject oPrefab = m_FishPrefabs[prefabIndex];
-        for (int i = 0; i < num; i++) {
+        for (int i = 0; i < num; i++)
+        {
             GameObject oFish = Instantiate(oPrefab);
             oFish.transform.SetParent(m_FishPanel, false);
             oFish.transform.localPosition = m_GeneratePositions[posIndex].localPosition;
@@ -53,6 +61,24 @@ public class FishGenerator : MonoBehaviour {
             //渲染排序?
             oFish.GetComponent<SpriteRenderer>().sortingOrder += i;
             oFish.AddComponent<Ef_AutoMove>().m_Speed = speed;
+            yield return new WaitForSeconds(fishGenWaitTime);
+        }
+    }
+
+    //生成旋转鱼群
+    IEnumerator GenerateTurnFish(int posIndex, int prefabIndex, int num, float speed, float angSpeed)
+    {
+        GameObject oPrefab = m_FishPrefabs[prefabIndex];
+        for (int i = 0; i < num; i++)
+        {
+            GameObject oFish = Instantiate(oPrefab);
+            oFish.transform.SetParent(m_FishPanel, false);
+            oFish.transform.localPosition = m_GeneratePositions[posIndex].localPosition;
+            oFish.transform.localRotation = m_GeneratePositions[posIndex].localRotation;
+            //渲染排序?
+            oFish.GetComponent<SpriteRenderer>().sortingOrder += i;
+            oFish.AddComponent<Ef_AutoMove>().m_Speed = speed;
+            oFish.AddComponent<Ef_AutoRotate>().m_Speed = angSpeed;
             yield return new WaitForSeconds(fishGenWaitTime);
         }
     }
