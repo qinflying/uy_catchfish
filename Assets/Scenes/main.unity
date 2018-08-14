@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 42340125}
   - component: {fileID: 42340126}
   - component: {fileID: 42340127}
+  - component: {fileID: 42340128}
   m_Layer: 0
   m_Name: 2Gun
   m_TagString: Untagged
@@ -347,6 +348,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UGUICanvas: {fileID: 258583574}
   m_RenderCamera: {fileID: 1740511605}
+--- !u!114 &42340128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 42340124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ffc0fb4aeca1046a8d45e8c5cd3747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShootCosts: 050000000a00000014000000
 --- !u!1 &69218410
 GameObject:
   m_ObjectHideFlags: 0
@@ -1817,6 +1830,7 @@ GameObject:
   m_Component:
   - component: {fileID: 534827079}
   - component: {fileID: 534827080}
+  - component: {fileID: 534827081}
   m_Layer: 0
   m_Name: 3Gun
   m_TagString: Untagged
@@ -1886,6 +1900,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &534827081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534827078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ffc0fb4aeca1046a8d45e8c5cd3747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShootCosts: 1e0000003200000050000000
 --- !u!1 &550546813
 GameObject:
   m_ObjectHideFlags: 0
@@ -2067,6 +2093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 740894852}
   - component: {fileID: 740894853}
+  - component: {fileID: 740894854}
   m_Layer: 0
   m_Name: 1000Gun
   m_TagString: Untagged
@@ -2136,6 +2163,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &740894854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 740894851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ffc0fb4aeca1046a8d45e8c5cd3747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShootCosts: f401000020030000e8030000
 --- !u!1 &762725583
 GameObject:
   m_ObjectHideFlags: 0
@@ -3284,6 +3323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1171846357}
   - component: {fileID: 1171846358}
+  - component: {fileID: 1171846359}
   m_Layer: 0
   m_Name: 4Gun
   m_TagString: Untagged
@@ -3351,6 +3391,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1171846359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1171846356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ffc0fb4aeca1046a8d45e8c5cd3747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShootCosts: 6400000096000000c8000000
 --- !u!1 &1204853802
 GameObject:
   m_ObjectHideFlags: 0
@@ -4436,7 +4488,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1543310955}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2142310576}
+        m_MethodName: OnUpgradeGun
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1543310955
@@ -4614,7 +4677,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1581803920}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2142310576}
+        m_MethodName: OnMinusGun
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1581803920
@@ -5715,6 +5789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1966151628}
   - component: {fileID: 1966151629}
+  - component: {fileID: 1966151630}
   m_Layer: 0
   m_Name: SGun
   m_TagString: Untagged
@@ -5781,6 +5856,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1966151630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1966151627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ffc0fb4aeca1046a8d45e8c5cd3747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShootCosts: d0070000
 --- !u!4 &2026234585 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ed85fee4b3a267f49914c3d07c7ab0e2, type: 2}
@@ -6068,6 +6155,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2142310575}
   - component: {fileID: 2142310574}
+  - component: {fileID: 2142310576}
   m_Layer: 0
   m_Name: CodeHandler
   m_TagString: Untagged
@@ -6137,3 +6225,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2142310576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2142310573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4919a1eeb3ad3334fb18048a56318b98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_GunArrays:
+  - {fileID: 42340124}
+  - {fileID: 534827078}
+  - {fileID: 1171846356}
+  - {fileID: 740894851}
+  - {fileID: 1966151627}
