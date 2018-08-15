@@ -74,18 +74,31 @@ public class GameContoller : MonoBehaviour
         }
     }
 
-    void Update() {
+    void Update()
+    {
         OnMouseScrollChangePower();
+        GameFire();
     }
 
     //鼠标滚轮切换火力
-    private void OnMouseScrollChangePower() {
+    private void OnMouseScrollChangePower()
+    {
         float fH = Input.GetAxis("Mouse ScrollWheel");
-        if (fH > 0) {
+        if (fH > 0)
+        {
             OnUpgradeGun();
         }
-        else if (fH < 0) {
+        else if (fH < 0)
+        {
             OnMinusGun();
+        }
+    }
+
+    private void GameFire()
+    {
+        if (Input.GetMouseButtonDown(0) && currentGun)
+        {
+            currentGun.GetComponent<GunAttr>().GameFire(15);
         }
     }
 
@@ -159,14 +172,18 @@ public class GameContoller : MonoBehaviour
         }
     }
 
-    private void switchGun() {
-        foreach (GameObject gun in m_GunArrays) {
+    private void switchGun()
+    {
+        foreach (GameObject gun in m_GunArrays)
+        {
             gun.SetActive(gun == currentGun);
         }
     }
 
-    private void swithGunCost() {
-        if (currentGun) {
+    private void swithGunCost()
+    {
+        if (currentGun)
+        {
             m_GunCostLabel.text = "$" + currentGun.GetComponent<GunAttr>().GetCurrentCost();
         }
     }

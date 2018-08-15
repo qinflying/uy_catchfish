@@ -6,6 +6,9 @@ public class GunAttr : MonoBehaviour
 {
     //发射消耗数组
     public int[] m_ShootCosts;
+    public GameObject[] m_Bullets;
+    public Transform m_FirePosition;
+    public Transform m_BulletPanel;
     private int m_Index = 0;
 
     //枪处于最大火力
@@ -67,5 +70,23 @@ public class GunAttr : MonoBehaviour
         get {
             return m_ShootCosts.Length;
         }
+    }
+
+    public void GameFire(int level) {
+        int index = level / 10;
+        index = (index >= m_Bullets.Length) ? m_Bullets.Length - 1 : index;
+        if (index < 0) {
+            return;
+        }
+
+        GameObject oBulletPrefab = m_Bullets[index];
+        GameObject oBullet = Instantiate(oBulletPrefab);
+        oBullet.transform.SetParent(m_BulletPanel);
+        oBullet.transform.position = m_FirePosition.position;
+        oBullet.transform.localRotation = transform.localRotation;
+
+        oBullet.AddComponent<Ef_AutoMove>().m_Speed = 5;
+        oBullet.GetComponent<Ef_AutoMove>().m_Direct = Vector3.up;
+        oBullet.GetComponent<BulletAttr>().InitPosition();
     }
 }

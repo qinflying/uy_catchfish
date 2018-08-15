@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - BorderBox
+  - Bullet
+  - Fish
   layers:
   - Default
   - TransparentFX

@@ -10,4 +10,7 @@ public enum MoveMode {
 
 public class ComDefine {
     public static string Tag_Border = "BorderBox";
+    public static string Tag_Fish = "Fish";
+    public static string Tag_Bullet = "Bullet";
+    public static string CodeHandler = "CodeHandler";
 }
