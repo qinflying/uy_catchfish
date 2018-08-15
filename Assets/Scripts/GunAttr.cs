@@ -20,10 +20,15 @@ public class GunAttr : MonoBehaviour
         return m_Index == 0;
     }
 
-    //初始化枪的威力
-    public void initPower()
+    //初始化枪的最小威力
+    public void initMinPower()
     {
         m_Index = 0;
+    }
+
+    public void initMaxPower() {
+        m_Index = m_ShootCosts.Length - 1;
+        m_Index = (m_Index < 0) ? 0 : m_Index;
     }
 
     //增加火力

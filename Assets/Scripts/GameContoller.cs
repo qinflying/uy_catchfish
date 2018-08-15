@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameContoller : MonoBehaviour
 {
     //武器数组，威力从小到大
     public GameObject[] m_GunArrays;
+    public Text m_GunCostLabel;
     //当前威力索引
     private int _currentPowerIndex = 0;
     //最大威力索引
@@ -72,6 +74,21 @@ public class GameContoller : MonoBehaviour
         }
     }
 
+    void Update() {
+        OnMouseScrollChangePower();
+    }
+
+    //鼠标滚轮切换火力
+    private void OnMouseScrollChangePower() {
+        float fH = Input.GetAxis("Mouse ScrollWheel");
+        if (fH > 0) {
+            OnUpgradeGun();
+        }
+        else if (fH < 0) {
+            OnMinusGun();
+        }
+    }
+
     //武器提升
     public void OnUpgradeGun()
     {
@@ -97,9 +114,10 @@ public class GameContoller : MonoBehaviour
                 {
                     _currentPowerIndex++;
                 }
-                currentGun.GetComponent<GunAttr>().initPower();
+                currentGun.GetComponent<GunAttr>().initMinPower();
                 switchGun();
             }
+            swithGunCost();
         }
     }
 
@@ -134,15 +152,22 @@ public class GameContoller : MonoBehaviour
                 {
                     _currentPowerIndex--;
                 }
-                currentGun.GetComponent<GunAttr>().initPower();
+                currentGun.GetComponent<GunAttr>().initMaxPower();
                 switchGun();
             }
+            swithGunCost();
         }
     }
 
     private void switchGun() {
         foreach (GameObject gun in m_GunArrays) {
             gun.SetActive(gun == currentGun);
+        }
+    }
+
+    private void swithGunCost() {
+        if (currentGun) {
+            m_GunCostLabel.text = "$" + currentGun.GetComponent<GunAttr>().GetCurrentCost();
         }
     }
 }
