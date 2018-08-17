@@ -29,16 +29,7 @@ public class BulletAttr : MonoBehaviour
 
     private void CatchFish()
     {
-        GameObject oCodeHandler = GameObject.Find(ComDefine.CodeHandler);
-        if (oCodeHandler) {
-            GameObject oFishNetPrefab = oCodeHandler.GetComponent<ManyHandler>().m_FishingNet;
-            if (oFishNetPrefab != null) {
-                Debug.Log("FishingNet");
-                GameObject oFishingNet = Instantiate(oFishNetPrefab);
-                oFishingNet.transform.SetParent(transform.parent);
-                oFishingNet.transform.localPosition = transform.localPosition;
-            }
-        }
+        FishingNet.CreateWithRoot(transform);
         Destroy(gameObject);
     }
 

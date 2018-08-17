@@ -371,7 +371,6 @@ MonoBehaviour:
   - {fileID: 1408089686399738, guid: da3957bcf390a6c4bb4bf92f58e914ba, type: 2}
   - {fileID: 1995100835291922, guid: acfe4ed785d616b45baa3791b30926d1, type: 2}
   - {fileID: 1361465473187194, guid: 177a1101a52aa41469c501f6e982ab3a, type: 2}
-  - {fileID: 1464624671358558, guid: f4631a4cfd9422540822bc2167243a0a, type: 2}
   - {fileID: 1189211556067520, guid: 32b4c724349a3824e95f8bc130d2130a, type: 2}
   m_FirePosition: {fileID: 43349631}
   m_BulletPanel: {fileID: 878600854}
@@ -2023,7 +2022,6 @@ MonoBehaviour:
   - {fileID: 1798581439032574, guid: 459daad7a30e5844ebfbec2a03cdab61, type: 2}
   - {fileID: 1643976419567242, guid: 1d40498cee90b494585fd42cb1599558, type: 2}
   - {fileID: 1822957086086384, guid: b21c6b0eabf8b0442a2f1bfbd1a7171a, type: 2}
-  - {fileID: 1037083978299162, guid: ba6c141822b5d0b4ca1bb4f924b2b57d, type: 2}
   - {fileID: 1026583914082668, guid: 5c53cf89b40363f48a211e92d15600d7, type: 2}
   m_FirePosition: {fileID: 160725144}
   m_BulletPanel: {fileID: 878600854}
@@ -2306,17 +2304,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ShootCosts: e8030000
   m_Bullets:
-  - {fileID: 1279558076321090, guid: 95e8ca8e4b0e2c443b692c6ba7f9cf7f, type: 2}
-  - {fileID: 1833433816854442, guid: 114c9d0eceea8c44a8dde792dd659124, type: 2}
-  - {fileID: 1287487677635558, guid: f3238aefdf12a7f4b80d4d4ba6c3e519, type: 2}
-  - {fileID: 1508147459769854, guid: 4cbecbe77794d4b469c8dd55018a86a8, type: 2}
-  - {fileID: 1588950441755194, guid: 5cf338483a7c803499384660f8ed75e7, type: 2}
-  - {fileID: 1083212064919560, guid: 8611798ef1b23a64490218a4ecfa2416, type: 2}
-  - {fileID: 1569387771383402, guid: 4aa03a6b585e8f942b93aff121fc540d, type: 2}
-  - {fileID: 1261257214550680, guid: efc75dbc0b32a7649bdf898d5dd35480, type: 2}
-  - {fileID: 1455436888975808, guid: 89554f0231a74f94399f1a195d787d90, type: 2}
-  - {fileID: 1074035995428472, guid: f9340c254b9c5f64ba71b32d5dec9d97, type: 2}
-  - {fileID: 1907728113775104, guid: c9038abe74f5167469549e2a25c9107c, type: 2}
+  - {fileID: 1662551083202598, guid: 933507568dbe8de4e842a4aa9b7ea17f, type: 2}
+  - {fileID: 1053311913226744, guid: cda7edfa24766f242a7bf8f3e84fd280, type: 2}
+  - {fileID: 1824000820374276, guid: cd4f189e742fec74d85c39854d6de27f, type: 2}
+  - {fileID: 1101846516708444, guid: f3402101bdd3df54dbb610cab7f18ed2, type: 2}
+  - {fileID: 1494307635123960, guid: d710a7d13c49dcd4390d13c3ce71c412, type: 2}
+  - {fileID: 1181017667139300, guid: a4f6a6f7d1e82314e8b3781ccde0641b, type: 2}
+  - {fileID: 1513352033407626, guid: f0d8c439b2006c04993281b94dfe9207, type: 2}
+  - {fileID: 1368339144913188, guid: 60fd309529b17a043bd5601deeead36a, type: 2}
+  - {fileID: 1800773663901910, guid: def9709a9c17dbd4ba95813073ac8f75, type: 2}
+  - {fileID: 1414982830331324, guid: a9b20af9d7c5507438b643d0459fb1a3, type: 2}
   m_FirePosition: {fileID: 1650635715}
   m_BulletPanel: {fileID: 878600854}
 --- !u!114 &740894855
@@ -3605,7 +3602,6 @@ MonoBehaviour:
   - {fileID: 1569387771383402, guid: 4aa03a6b585e8f942b93aff121fc540d, type: 2}
   - {fileID: 1261257214550680, guid: efc75dbc0b32a7649bdf898d5dd35480, type: 2}
   - {fileID: 1455436888975808, guid: 89554f0231a74f94399f1a195d787d90, type: 2}
-  - {fileID: 1074035995428472, guid: f9340c254b9c5f64ba71b32d5dec9d97, type: 2}
   - {fileID: 1907728113775104, guid: c9038abe74f5167469549e2a25c9107c, type: 2}
   m_FirePosition: {fileID: 269600445}
   m_BulletPanel: {fileID: 878600854}
@@ -6147,17 +6143,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ShootCosts: f401000058020000bc02000020030000
   m_Bullets:
-  - {fileID: 1279558076321090, guid: 95e8ca8e4b0e2c443b692c6ba7f9cf7f, type: 2}
-  - {fileID: 1833433816854442, guid: 114c9d0eceea8c44a8dde792dd659124, type: 2}
-  - {fileID: 1287487677635558, guid: f3238aefdf12a7f4b80d4d4ba6c3e519, type: 2}
-  - {fileID: 1508147459769854, guid: 4cbecbe77794d4b469c8dd55018a86a8, type: 2}
-  - {fileID: 1588950441755194, guid: 5cf338483a7c803499384660f8ed75e7, type: 2}
-  - {fileID: 1083212064919560, guid: 8611798ef1b23a64490218a4ecfa2416, type: 2}
-  - {fileID: 1569387771383402, guid: 4aa03a6b585e8f942b93aff121fc540d, type: 2}
-  - {fileID: 1261257214550680, guid: efc75dbc0b32a7649bdf898d5dd35480, type: 2}
-  - {fileID: 1455436888975808, guid: 89554f0231a74f94399f1a195d787d90, type: 2}
-  - {fileID: 1074035995428472, guid: f9340c254b9c5f64ba71b32d5dec9d97, type: 2}
-  - {fileID: 1907728113775104, guid: c9038abe74f5167469549e2a25c9107c, type: 2}
+  - {fileID: 1662551083202598, guid: 933507568dbe8de4e842a4aa9b7ea17f, type: 2}
+  - {fileID: 1053311913226744, guid: cda7edfa24766f242a7bf8f3e84fd280, type: 2}
+  - {fileID: 1824000820374276, guid: cd4f189e742fec74d85c39854d6de27f, type: 2}
+  - {fileID: 1101846516708444, guid: f3402101bdd3df54dbb610cab7f18ed2, type: 2}
+  - {fileID: 1494307635123960, guid: d710a7d13c49dcd4390d13c3ce71c412, type: 2}
+  - {fileID: 1181017667139300, guid: a4f6a6f7d1e82314e8b3781ccde0641b, type: 2}
+  - {fileID: 1513352033407626, guid: f0d8c439b2006c04993281b94dfe9207, type: 2}
+  - {fileID: 1368339144913188, guid: 60fd309529b17a043bd5601deeead36a, type: 2}
+  - {fileID: 1800773663901910, guid: def9709a9c17dbd4ba95813073ac8f75, type: 2}
+  - {fileID: 1414982830331324, guid: a9b20af9d7c5507438b643d0459fb1a3, type: 2}
   m_FirePosition: {fileID: 1904353965}
   m_BulletPanel: {fileID: 878600854}
 --- !u!114 &1966151631
