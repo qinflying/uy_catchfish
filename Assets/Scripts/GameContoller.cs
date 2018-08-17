@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class GameContoller : MonoBehaviour
@@ -8,6 +9,7 @@ public class GameContoller : MonoBehaviour
     //武器数组，威力从小到大
     public GameObject[] m_GunArrays;
     public Text m_GunCostLabel;
+    public int m_Level = 0;
     //当前威力索引
     private int _currentPowerIndex = 0;
     //最大威力索引
@@ -74,6 +76,11 @@ public class GameContoller : MonoBehaviour
         }
     }
 
+    void Awake() {
+        switchGun();
+        swithGunCost();
+    }
+
     void Update()
     {
         OnMouseScrollChangePower();
@@ -96,9 +103,9 @@ public class GameContoller : MonoBehaviour
 
     private void GameFire()
     {
-        if (Input.GetMouseButtonDown(0) && currentGun)
+        if (Input.GetMouseButtonDown(0) && currentGun && !EventSystem.current.IsPointerOverGameObject())
         {
-            currentGun.GetComponent<GunAttr>().GameFire(15);
+            currentGun.GetComponent<GunAttr>().GameFire(m_Level);
         }
     }
 

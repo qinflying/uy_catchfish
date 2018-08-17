@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 212386833974527690}
   - component: {fileID: 95579207202941188}
   - component: {fileID: 114360137331416856}
-  - component: {fileID: 50508843974370194}
   - component: {fileID: 61118979159336288}
   m_Layer: 0
   m_Name: bp2_6
@@ -44,26 +43,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50508843974370194
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1798581439032574}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &61118979159336288
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -118,6 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MoveMaxDis: 5
+  m_FishingNetPrefab: {fileID: 1002137953454006, guid: a1a072b80922dee4398799d54a23e36c,
+    type: 2}
 --- !u!212 &212386833974527690
 SpriteRenderer:
   m_ObjectHideFlags: 1

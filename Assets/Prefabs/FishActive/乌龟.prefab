@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1454292258180098}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -6479.9995}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 72, y: 72, z: 72}
   m_Children: []
   m_Father: {fileID: 0}
@@ -131,6 +131,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nMaxAmount: 7
   fMaxSpeed: 6
+  m_HP: 100
+  m_DiePrefab: {fileID: 1992353925638920, guid: 30ce54aee7fb3bf41b598a91e05b040f,
+    type: 2}
 --- !u!212 &212251941750277254
 SpriteRenderer:
   m_ObjectHideFlags: 1

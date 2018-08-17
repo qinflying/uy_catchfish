@@ -5,8 +5,14 @@ using UnityEngine;
 public class BulletAttr : MonoBehaviour
 {
     public float m_MoveMaxDis = 5.0f;
+    public GameObject m_FishingNetPrefab;
     private Vector3 m_InitPosition;
     private bool m_IsInit = false;
+    private float _damage;
+
+    public void setDamage(float damage) {
+        _damage = damage;
+    }
 
     // Update is called once per frame
     void Update()
@@ -29,7 +35,12 @@ public class BulletAttr : MonoBehaviour
 
     private void CatchFish()
     {
-        FishingNet.CreateWithRoot(transform);
+        if (m_FishingNetPrefab != null) {
+            GameObject oFishingNet = Instantiate(m_FishingNetPrefab);
+            oFishingNet.transform.SetParent(transform.parent);
+            oFishingNet.transform.localPosition = transform.localPosition;
+            oFishingNet.GetComponent<FishingNet>().setDamage(_damage);
+        }
         Destroy(gameObject);
     }
 

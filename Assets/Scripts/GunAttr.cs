@@ -87,6 +87,8 @@ public class GunAttr : MonoBehaviour
 
         oBullet.AddComponent<Ef_AutoMove>().m_Speed = 5;
         oBullet.GetComponent<Ef_AutoMove>().m_Direct = Vector3.up;
-        oBullet.GetComponent<BulletAttr>().InitPosition();
+        BulletAttr oBulletAttr = oBullet.GetComponent<BulletAttr>();
+        oBulletAttr.InitPosition();
+        oBulletAttr.setDamage(GetCurrentCost());
     }
 }
